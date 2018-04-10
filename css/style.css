@@ -1,0 +1,50 @@
+body {
+    background-image: url(../images/background.jpeg);
+    background-size: cover;
+}
+
+#app {
+    padding: 5%;
+}
+.container {
+    text-align: center;
+}
+
+#title {
+    font-size: 65px;
+    font-family: 'Bitter', serif;
+}
+
+#subTitle {
+    font-size: 50px;
+    font-family: 'Bitter', serif;    
+}
+
+.row {
+    margin: 15px;
+}
+
+#city {
+    font-size: x-large;
+    font-family: 'Bitter', serif;
+}
+
+#temp {
+    font-size: x-large;
+    font-family: 'Bitter', serif;    
+}
+
+#tempScale {
+    text-decoration: none;
+    font-size: x-large;
+    font-family: 'Bitter', serif;    
+}
+
+#des {
+    font-size: x-large;
+    font-family: 'Bitter', serif;    
+}
+
+#emoji {
+    height: 200px;
+}

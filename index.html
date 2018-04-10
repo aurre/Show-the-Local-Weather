@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Weather app</title>
+</head>
+<body>
+    <div class="container" id="app">
+        <div class="container" id="header">
+            <h1 id="title">Free Code Camp</h1>
+            <h2 id="subTitle">Weather App</h2>
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-md-center">
+              <div class="col-md-auto">
+                <span id="city"> Chicago, US</span>
+              </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                   <span id="temp"> 36</span><a id="tempScale" href="#" target="_blank">&#x2109;</a>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <span id="des">Cludy</span>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <img id="emoji" src="./images/cludy.png" alt="weather emoji">
+                </div>
+            </div>
+        </div>
+        <footer class="container-fluid">
+                <p class="love">Made with ❤ by <a href="https://github.com/aurre">Raysa</a></p>
+        </footer>
+    </div>
+
+   
+ 
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
