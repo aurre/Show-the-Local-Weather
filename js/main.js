@@ -14,10 +14,8 @@ function cityHandler(str) {
     let newCity = str.split(' ').join('+');
     return newCity;
 }
-// cityHandler('New York');
 
 function getLocation() {
-    // console.log(city)
     var lat;
     var lon;
 

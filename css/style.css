@@ -1,3 +1,8 @@
+html {
+    padding-top: 35px;
+    padding-bottom: 45px;
+}
+
 body {
     background-image: url(../images/background.jpeg);
     background-size: cover;
@@ -10,7 +15,7 @@ body {
     -moz-border-radius:25px;
     border-radius: 25px;
     padding: 15px 25px;
-    height: -webkit-fill-available;
+    height: auto;
     width: 400px;
         
 }
@@ -19,12 +24,12 @@ body {
 }
 
 #title {
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Bitter', serif;
 }
 
 #subTitle {
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Bitter', serif;    
 }
 
