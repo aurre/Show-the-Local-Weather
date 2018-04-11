@@ -4,19 +4,27 @@ body {
 }
 
 #app {
-    padding: 5%;
+    border: 5px solid #111;
+    -moz-box-shadow: 35px 35px 7px #999999;
+    -moz-border-bottom-right-radius: 15px;
+    -moz-border-radius:25px;
+    border-radius: 25px;
+    padding: 15px 25px;
+    height: -webkit-fill-available;
+    width: 400px;
+        
 }
 .container {
     text-align: center;
 }
 
 #title {
-    font-size: 65px;
+    font-size: 50px;
     font-family: 'Bitter', serif;
 }
 
 #subTitle {
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Bitter', serif;    
 }
 
@@ -30,14 +38,16 @@ body {
 }
 
 #temp {
-    font-size: x-large;
-    font-family: 'Bitter', serif;    
+    font-size: 40px;
+    font-family: 'Bitter', serif;
+    font-weight: 600; 
 }
 
 #tempInCel {
     text-decoration: none;
     font-size: x-large;
-    font-family: 'Bitter', serif;    
+    font-family: 'Bitter', serif;
+    float: right;   
 }
 
 #tempInCel:hover {
