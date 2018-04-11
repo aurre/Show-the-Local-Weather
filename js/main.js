@@ -76,7 +76,7 @@ function getLocation() {
                                 $('#emoji').attr('src', './images/windy.png')
                             }
                         })(mainDesc);
-                     
+
                         console.log(resp);
                         console.log(temp);
 
@@ -98,21 +98,22 @@ $(document).ready(function () {
 
     $('#tempInCel').on('click', function(){
       console.log('I was clicked');
-      
+      let convertion = $('#tempInCel').html();
       let tempt = $('#temp').html();
-      let change = celsiusToFahren(tempt);
-      $('#temp').text(change);
-      $('#tempInCel').html('&#8457;');
-      $('#tempInCel').attr('id', 'tempInFah')
-      
-    });
+      console.log(convertion.charCodeAt(0));
 
-    $('#tempInFah').on('click', function() {
+      if (convertion.charCodeAt(0) === 8451) {
+        let change = celsiusToFahren(tempt);
 
-        let tempt = $('#temp').html();
-        let change = fahrenToCels(tempt);
         $('#temp').text(change);
         $('#tempInCel').html('&#8457;');
-        $('#tempInFah').attr('id', 'tempInCel')
+
+      } else {
+        let change = fahrenToCels(tempt);
+
+        $('#temp').text(change);
+        $('#tempInCel').html('&#x2103;');
+      }
+
     });
 })
