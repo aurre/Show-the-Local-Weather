@@ -50,6 +50,17 @@ body {
     float: right;   
 }
 
+#tempInFah {
+    text-decoration: none;
+    font-size: x-large;
+    font-family: 'Bitter', serif;
+    float: right;
+}
+
+#tempInFah:hover {
+    color: red;
+}
+
 #tempInCel:hover {
     color: red;
 }

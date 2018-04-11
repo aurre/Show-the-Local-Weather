@@ -1,10 +1,10 @@
 
-function celsiusToFahren(num) {
+let celsiusToFahren = function(num) {
     let resultTemp = num * 1.8 + 32
     return Math.round(resultTemp)
 }
 
-function fahrenToCels(num) {
+let fahrenToCels = function(num) {
     let resultTemp = (num - 32) * 0.5556
     return Math.round(resultTemp)
 }
@@ -72,11 +72,14 @@ function getLocation() {
                             }
                             if (mainDesc === 'Snow') {
                                 $('#emoji').attr('src', './images/snow.png');
+                            } else {
+                                $('#emoji').attr('src', './images/windy.png')
                             }
                         })(mainDesc);
                      
                         console.log(resp);
                         console.log(temp);
+
                     }
                 });
             }
@@ -90,8 +93,26 @@ $(document).ready(function () {
     $.get('http://ipinfo.io', function (response) {
         $('#city').html(response.city + ',' + response.country);
     }, 'jsonp');
+
     getLocation();
-    $('#tempScale').on('click', function(){
+
+    $('#tempInCel').on('click', function(){
       console.log('I was clicked');
-    })
+      
+      let tempt = $('#temp').html();
+      let change = celsiusToFahren(tempt);
+      $('#temp').text(change);
+      $('#tempInCel').html('&#8457;');
+      $('#tempInCel').attr('id', 'tempInFah')
+      
+    });
+
+    $('#tempInFah').on('click', function() {
+
+        let tempt = $('#temp').html();
+        let change = fahrenToCels(tempt);
+        $('#temp').text(change);
+        $('#tempInCel').html('&#8457;');
+        $('#tempInFah').attr('id', 'tempInCel')
+    });
 })
