@@ -20,7 +20,7 @@ function getLocation() {
     // console.log(city)
     var lat;
     var lon;
-    
+
 
     $.get('http://ipinfo.io', function (response) {
         let city = response.city;
@@ -38,7 +38,7 @@ function getLocation() {
                     r = JSON.parse(r);
                 }
                 console.log(r);
-                
+
                 lat = r.Results[0].lat;
                 lon = r.Results[0].lon;
                 console.log('lat = ' + lat + ' and lon = ' + lon);
@@ -52,16 +52,37 @@ function getLocation() {
                         if (typeof resp === 'string') {
                             resp = JSON.parse(resp);
                         }
-                        let temp = resp.main.temp
+                        let temp = Math.round(resp.main.temp);
+                        let desc = resp.weather[0].description;
+                        let mainDesc = resp.weather[0].main;
                         $('#temp').html(temp);
-                        console.log(resp);                        
+                        $('#des').html(desc);
+                        (function(str) {
+                            if (mainDesc === 'Rain' || mainDesc === 'Drizzle') {
+                                $('#emoji').attr('src', './images/rain.png');
+                            }
+                            if (mainDesc === 'Clouds' || mainDesc === 'Mist') {
+                                $('#emoji').attr('src', './images/cludy.png');
+                            }
+                            if (mainDesc === 'Clear') {
+                                $('#emoji').attr('src', './images/suny.png');
+                            }
+                            if (mainDesc === 'Thunderstorm') {
+                                $('#emoji').attr('src', './images/storm.png');
+                            }
+                            if (mainDesc === 'Snow') {
+                                $('#emoji').attr('src', './images/snow.png');
+                            }
+                        })(mainDesc);
+                     
+                        console.log(resp);
                         console.log(temp);
                     }
                 });
-            }         
-        });        
+            }
+        });
     }, 'jsonp');
-    
+
 }
 
 $(document).ready(function () {
@@ -70,4 +91,7 @@ $(document).ready(function () {
         $('#city').html(response.city + ',' + response.country);
     }, 'jsonp');
     getLocation();
+    $('#tempScale').on('click', function(){
+      console.log('I was clicked');
+    })
 })

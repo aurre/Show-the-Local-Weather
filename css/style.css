@@ -34,10 +34,14 @@ body {
     font-family: 'Bitter', serif;    
 }
 
-#tempScale {
+#tempInCel {
     text-decoration: none;
     font-size: x-large;
     font-family: 'Bitter', serif;    
+}
+
+#tempInCel:hover {
+    color: red;
 }
 
 #des {
